@@ -2,6 +2,8 @@ import UIKit
 
 // MARK -- Ejercicio 3
 
+func elementsWithMoreThanTwoVowels(){
+    
     var players = ["Vinicius", "Messi", "Ronaldo", "Pedri", "Mbappe", "Modric", "Militao","Morata","Valverde","Benzema", "Piqué" ]
     
     let vowels = Array("aeiou")
@@ -9,8 +11,8 @@ import UIKit
     var numVowels = 0
     
     for player in players{
-        for letra in player.lowercased(){
-            if vowels.contains(letra) {
+        for char in player.lowercased(){
+            if vowels.contains(char) {
                 numVowels += 1
             }
         }
@@ -20,6 +22,8 @@ import UIKit
         numVowels = 0
         
     }
-    
+}
+   
+elementsWithMoreThanTwoVowels()
     
 

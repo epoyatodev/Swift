@@ -1,8 +1,6 @@
 import UIKit
 
 // MARK -- Ejercicio 4
-
-func ejercicio4(){
     
     enum PlayerPosition {
         case portero
@@ -15,4 +13,7 @@ func ejercicio4(){
         case delantero
         
     }
-}
+
+
+
+
