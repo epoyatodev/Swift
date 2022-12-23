@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController" customModule="ProyectoDos" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionDetailLabel" destination="3Lp-sB-cDb" id="abB-Ks-QXn"/>
+                <outlet property="imageDetails" destination="Gum-h1-XVK" id="Us7-8P-iGA"/>
+                <outlet property="nameDetailLabel" destination="0MA-aP-7fz" id="DnF-Tp-qYf"/>
+                <outlet property="transformationDetails" destination="GeG-py-fEK" id="ojB-is-5hr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gum-h1-XVK">
+                    <rect key="frame" x="0.0" y="59" width="393" height="200"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="cAg-kL-d3t"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0MA-aP-7fz">
+                    <rect key="frame" x="15" y="267" width="370" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="0hK-sM-d13"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Lp-sB-cDb">
+                    <rect key="frame" x="24" y="300" width="357" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="oYT-u1-zJx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeG-py-fEK">
+                    <rect key="frame" x="96.666666666666686" y="570" width="200" height="50"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="2Y3-bc-JII"/>
+                        <constraint firstAttribute="height" constant="50" id="hac-AN-5B8"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Transformaciones"/>
+                    <connections>
+                        <action selector="transformationDetailsAction:" destination="-1" eventType="touchUpInside" id="Fi1-tg-fSb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Gum-h1-XVK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6Ap-v9-1Xd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Gum-h1-XVK" secondAttribute="trailing" id="8p5-Yo-Jjk"/>
+                <constraint firstItem="3Lp-sB-cDb" firstAttribute="top" secondItem="0MA-aP-7fz" secondAttribute="bottom" constant="12" id="Nkd-q9-hkN"/>
+                <constraint firstItem="GeG-py-fEK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZNn-jP-U8B"/>
+                <constraint firstItem="0MA-aP-7fz" firstAttribute="top" secondItem="Gum-h1-XVK" secondAttribute="bottom" constant="8" id="auF-T7-0iS"/>
+                <constraint firstItem="GeG-py-fEK" firstAttribute="top" secondItem="3Lp-sB-cDb" secondAttribute="bottom" constant="20" id="jRf-Zh-pN6"/>
+                <constraint firstItem="Gum-h1-XVK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="khh-8E-Zww"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3Lp-sB-cDb" secondAttribute="trailing" constant="12" id="lU6-nD-M1l"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0MA-aP-7fz" secondAttribute="trailing" constant="8" id="mMJ-0O-Ufx"/>
+                <constraint firstItem="0MA-aP-7fz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="on8-7F-nhi"/>
+                <constraint firstItem="3Lp-sB-cDb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="pbD-9D-SbM"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
