@@ -11,6 +11,8 @@ import UIKit
 final class LocalDataLayer {
     private static let token = "token"
     private static let heroes = "heroes"
+    private static let favorite = "favorite"
+
 
     static let shared = LocalDataLayer()
     
@@ -25,6 +27,10 @@ final class LocalDataLayer {
     func deleteToken() -> Void {
         UserDefaults.standard.set("", forKey: Self.token)
         
+    }
+    func changeFavorite() -> Void {
+        UserDefaults.standard.set(0, forKey: Self.favorite)
+
     }
     
     func isUserLogged() -> Bool {
@@ -43,11 +49,15 @@ final class LocalDataLayer {
                 let savedHeroes = try JSONDecoder().decode([Heroe].self, from: savedHeroesData)
                 return savedHeroes
             } catch {
-                print("Somethinbf went wrong !!!")
+                print("Something went wrong !!!")
                 return []
             }
         } else {
             return []
         }
+    }
+    
+    func favoriteHeroe() {
+        
     }
 }

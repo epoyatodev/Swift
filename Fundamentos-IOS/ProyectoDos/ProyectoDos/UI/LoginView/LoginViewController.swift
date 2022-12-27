@@ -15,6 +15,8 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginButtom.layer.masksToBounds = true
+        loginButtom.layer.cornerRadius = 5
 
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(openKeyBoard),

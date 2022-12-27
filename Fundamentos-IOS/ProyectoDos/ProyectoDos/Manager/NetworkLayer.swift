@@ -57,7 +57,7 @@ final class Networklayer {
         task.resume()
         
     }
-
+    
     func fetchHeroes(token: String?, completion: @escaping([Heroe]?, Error?)-> Void) {
         guard let url = URL(string: "https://dragonball.keepcoding.education/api/heros/all") else {
             return
@@ -90,8 +90,9 @@ final class Networklayer {
             completion(heroes, nil)
         }
         task.resume()
-
+        
     }
+    
     
     func fetchTransformations(token: String?, heroeId: String?, completion: @escaping([Tranformation]?, Error?)-> Void) {
         guard let url = URL(string: "https://dragonball.keepcoding.education/api/heros/tranformations") else {
@@ -125,6 +126,39 @@ final class Networklayer {
             completion(tranformations, nil)
         }
         task.resume()
-
+        
     }
+    
+    func favoriteHeroe(token: String?, heroeId: String?, completion: @escaping (String?, Error?)-> Void ) {
+        guard let url = URL(string: "https://dragonball.keepcoding.education/api/data/herolike") else { completion(nil, NetworkError.malformedUrl)
+            return
+        }
+        
+        var urlComponents = URLComponents()
+        urlComponents.queryItems = [URLQueryItem(name: "hero", value: heroeId ?? "")]
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
+        urlRequest.setValue("Bearer \(token ?? "")" , forHTTPHeaderField: "Authorization")
+        urlRequest.httpBody = urlComponents.query?.data(using: .utf8)
+        
+        let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+            guard error == nil else {
+                completion(nil, error)
+                return
+            }
+            
+            guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+                let statusCode = (response as? HTTPURLResponse)?.statusCode
+                completion(nil, NetworkError.statusCode(code: statusCode))
+                return
+            }
+            
+            completion("Marcado como favorito", nil)
+        }
+        task.resume()
+        
+    }
+    
+    
 }

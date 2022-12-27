@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="ProyectoDos" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="DragonBall" customModuleProvider="target">
             <connections>
                 <outlet property="emailTextField" destination="Y3B-Vu-sLF" id="l9a-uM-yiI"/>
                 <outlet property="loginButtom" destination="7bu-V5-wD9" id="szb-PE-fti"/>
@@ -19,35 +19,35 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo2" translatesAutoresizingMaskIntoConstraints="NO" id="prL-Ti-CVp">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cJy-6y-52P">
-                    <rect key="frame" x="77.666666666666686" y="316.66666666666669" width="220" height="34"/>
+                    <rect key="frame" x="86.666666666666686" y="406" width="220" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="34" id="3SA-GC-HCV"/>
+                        <constraint firstAttribute="height" constant="40" id="3SA-GC-HCV"/>
                         <constraint firstAttribute="width" constant="220" id="czy-Nd-hvj"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y3B-Vu-sLF">
-                    <rect key="frame" x="77.666666666666686" y="250.66666666666663" width="220" height="34"/>
+                    <rect key="frame" x="86.666666666666686" y="334" width="220" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="34" id="C89-cT-HR9"/>
+                        <constraint firstAttribute="height" constant="40" id="C89-cT-HR9"/>
                         <constraint firstAttribute="width" constant="220" id="UPa-OJ-3X2"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bu-V5-wD9">
-                    <rect key="frame" x="77.666666666666686" y="382.66666666666669" width="220" height="50"/>
+                    <rect key="frame" x="86.666666666666686" y="478" width="220" height="45"/>
                     <color key="backgroundColor" name="AccentColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="duu-v4-qjN"/>
+                        <constraint firstAttribute="height" constant="45" id="duu-v4-qjN"/>
                         <constraint firstAttribute="width" constant="220" id="zNj-wP-xJW"/>
                     </constraints>
                     <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>

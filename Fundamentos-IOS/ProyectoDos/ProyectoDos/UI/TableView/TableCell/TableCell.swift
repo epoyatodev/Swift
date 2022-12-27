@@ -9,9 +9,20 @@ import UIKit
 
 class TableCell: UITableViewCell {
 
+    
+   
+    
+    
+    
+    @IBOutlet weak var favoriteIcon: UIImageView!
     @IBOutlet weak var labelCell: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
+    
+  
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,5 +33,10 @@ class TableCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+     
+    
+   
+   
     
 }

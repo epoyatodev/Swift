@@ -8,12 +8,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController" customModule="ProyectoDos" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController" customModule="DragonBall" customModuleProvider="target">
             <connections>
                 <outlet property="descriptionDetailLabel" destination="3Lp-sB-cDb" id="abB-Ks-QXn"/>
+                <outlet property="favoriteButtonLabel" destination="e9Y-Mv-KyE" id="M9b-6U-qId"/>
                 <outlet property="imageDetails" destination="Gum-h1-XVK" id="Us7-8P-iGA"/>
                 <outlet property="nameDetailLabel" destination="0MA-aP-7fz" id="DnF-Tp-qYf"/>
-                <outlet property="transformationDetails" destination="GeG-py-fEK" id="ojB-is-5hr"/>
+                <outlet property="transformationDetails" destination="GeG-py-fEK" id="kd7-BE-eDY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -58,7 +59,21 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Transformaciones"/>
                     <connections>
-                        <action selector="transformationDetailsAction:" destination="-1" eventType="touchUpInside" id="Fi1-tg-fSb"/>
+                        <action selector="transformationDetailsAction:" destination="-1" eventType="touchUpInside" id="IF0-Gp-uxv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9Y-Mv-KyE">
+                    <rect key="frame" x="96.666666666666686" y="645" width="200" height="50"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="2d5-5S-RgS"/>
+                        <constraint firstAttribute="height" constant="50" id="F7A-bF-Gae"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="favoriteAction:" destination="-1" eventType="touchUpInside" id="jPz-Lc-8cy"/>
                     </connections>
                 </button>
             </subviews>
@@ -67,7 +82,9 @@
             <constraints>
                 <constraint firstItem="Gum-h1-XVK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6Ap-v9-1Xd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Gum-h1-XVK" secondAttribute="trailing" id="8p5-Yo-Jjk"/>
+                <constraint firstItem="e9Y-Mv-KyE" firstAttribute="top" secondItem="GeG-py-fEK" secondAttribute="bottom" constant="25" id="ICg-il-qv8"/>
                 <constraint firstItem="3Lp-sB-cDb" firstAttribute="top" secondItem="0MA-aP-7fz" secondAttribute="bottom" constant="12" id="Nkd-q9-hkN"/>
+                <constraint firstItem="e9Y-Mv-KyE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YWG-sB-j6j"/>
                 <constraint firstItem="GeG-py-fEK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZNn-jP-U8B"/>
                 <constraint firstItem="0MA-aP-7fz" firstAttribute="top" secondItem="Gum-h1-XVK" secondAttribute="bottom" constant="8" id="auF-T7-0iS"/>
                 <constraint firstItem="GeG-py-fEK" firstAttribute="top" secondItem="3Lp-sB-cDb" secondAttribute="bottom" constant="20" id="jRf-Zh-pN6"/>
@@ -86,6 +103,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

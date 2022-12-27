@@ -12,17 +12,19 @@ struct CustomItem {
     let text: String
 }
 
-class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-  
 
+
+class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
     var heroes: [Heroe] = []
+    var isfavoriteChecked = false
     
- 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -46,22 +48,24 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }else {
                 print("Error", error?.localizedDescription ?? "")
             }
+            
         }
+        
+        
+        
+        
+        
+        
     }
     
-    //Delegate and DataSource
+    // Delegate and DataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return heroes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-//        let weekDayName = singleRows[indexPath.row]
-//
-//        cell.textLabel?.text = weekDayName
-//
-//        return cell
+        
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "customTableCell", for: indexPath) as! TableCell
         let heroe = heroes[indexPath.row]
@@ -69,6 +73,14 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.iconImageView.setImage(url: heroe.photo)
         cell.labelCell.text = heroe.name
         cell.descLabel.text = heroe.description
+        
+        if heroe.favorite {
+            cell.favoriteIcon.image = UIImage(systemName: "heart.fill")
+        }else{
+            cell.favoriteIcon.image = UIImage(systemName: "heart")
+            
+        }
+        
         cell.accessoryType = .disclosureIndicator
         cell.selectionStyle = .none
         
@@ -77,7 +89,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
-
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
     }
@@ -89,7 +102,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         detailsView.heroe = heroe
         navigationController?.pushViewController(detailsView, animated: true)
     }
-
+    
 }
 
 extension UIImageView {
@@ -108,7 +121,7 @@ extension UIImageView {
     }
     
     private func downloadImage(url: URL, completion: @escaping (UIImage?)-> Void){
-        URLSession.shared.dataTask(with: url) { data, response, error in 
+        URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data, let image = UIImage(data: data) else {
                 completion(nil)
                 return
@@ -116,6 +129,8 @@ extension UIImageView {
             
             completion(image)
         }.resume()
-            
+        
     }
+    
+    
 }
