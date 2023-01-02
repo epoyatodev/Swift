@@ -78,8 +78,8 @@ class DetailsViewController: UIViewController {
             }
             
             DispatchQueue.main.async {
-                let transView = TableViewController()
-                self.navigationController?.pushViewController(transView, animated: true)
+                UIApplication.shared.connectedScenes.compactMap{ ($0 as? UIWindowScene)?.keyWindow }.first?.rootViewController = HomeTabBarController()
+
             }
             
         }

@@ -160,5 +160,37 @@ final class Networklayer {
         
     }
     
+    func fetchUser(token: String?, completion: @escaping(User?, Error?)-> Void) {
+        guard let url = URL(string: "https://dragonball.keepcoding.education/api/data/connected") else {
+            return
+        }
+        
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "GET"
+        urlRequest.setValue("Bearer \(token ?? "")" , forHTTPHeaderField: "Authorization")
+        
+        let task = URLSession.shared.dataTask(with: urlRequest) { data, _, error in
+            guard error == nil else {
+                completion(nil, error)
+                return
+            }
+            
+            guard let data = data else {
+                completion(nil, NetworkError.noData)
+                return
+            }
+            
+            guard let  user = try? JSONDecoder().decode(User.self, from: data) else {
+                completion(nil, NetworkError.decodingFailed)
+                return
+            }
+            
+            completion(user, nil)
+        }
+        task.resume()
+        
+    }
+    
     
 }

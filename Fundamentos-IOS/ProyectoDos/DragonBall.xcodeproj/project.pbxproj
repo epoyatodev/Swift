@@ -16,6 +16,8 @@
 		3A1AADDB294F8DF5006B1D8D /* LocalDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AADDA294F8DF5006B1D8D /* LocalDataLayer.swift */; };
 		3A1AADDD294F8E26006B1D8D /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AADDC294F8E26006B1D8D /* NetworkLayer.swift */; };
 		3A1AADE0294F8F4E006B1D8D /* Heroe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AADDF294F8F4E006B1D8D /* Heroe.swift */; };
+		3A27DCC5295B73A5003E59BA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A27DCC4295B73A5003E59BA /* User.swift */; };
+		3A27DCC6295B73A5003E59BA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A27DCC4295B73A5003E59BA /* User.swift */; };
 		3A4A6B412955178100D5E34D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4A6B3F2955178100D5E34D /* ProfileViewController.swift */; };
 		3A4A6B422955178100D5E34D /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A4A6B402955178100D5E34D /* ProfileViewController.xib */; };
 		3A9582C42948FBCD00739CFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9582C32948FBCD00739CFC /* AppDelegate.swift */; };
@@ -68,6 +70,7 @@
 		3A1AADDA294F8DF5006B1D8D /* LocalDataLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataLayer.swift; sourceTree = "<group>"; };
 		3A1AADDC294F8E26006B1D8D /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		3A1AADDF294F8F4E006B1D8D /* Heroe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heroe.swift; sourceTree = "<group>"; };
+		3A27DCC4295B73A5003E59BA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3A4A6B3F2955178100D5E34D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3A4A6B402955178100D5E34D /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		3A9582C02948FBCD00739CFC /* DragonBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +165,7 @@
 			children = (
 				3A1AADDF294F8F4E006B1D8D /* Heroe.swift */,
 				3ACE5C9B2954D452002D2FF8 /* Tranformation.swift */,
+				3A27DCC4295B73A5003E59BA /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -442,6 +446,7 @@
 				3A9582C42948FBCD00739CFC /* AppDelegate.swift in Sources */,
 				3A9582F82948FD9500739CFC /* TableViewController.swift in Sources */,
 				3A1AADDB294F8DF5006B1D8D /* LocalDataLayer.swift in Sources */,
+				3A27DCC5295B73A5003E59BA /* User.swift in Sources */,
 				3A9582FD2949080E00739CFC /* TableCell.swift in Sources */,
 				3A1AADD7294F865B006B1D8D /* LoginViewController.swift in Sources */,
 				3ACE5C9C2954D452002D2FF8 /* Tranformation.swift in Sources */,
@@ -462,6 +467,7 @@
 			files = (
 				3A9582DB2948FBCD00739CFC /* ProyectoDosTests.swift in Sources */,
 				3ACE5CA32954EDEF002D2FF8 /* HeroeTest.swift in Sources */,
+				3A27DCC6295B73A5003E59BA /* User.swift in Sources */,
 				3ACE5CA72954F4C8002D2FF8 /* Tranformation.swift in Sources */,
 				3ACE5CA62954F49C002D2FF8 /* TransformationsTest.swift in Sources */,
 				3ACE5CA42954EE6A002D2FF8 /* Heroe.swift in Sources */,

@@ -51,12 +51,38 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
         }
         
-        
-        
-        
+        let refreshControl = UIRefreshControl()
+           refreshControl.addTarget(self, action: #selector(doSomething), for: .valueChanged)
+           
+           // this is the replacement of implementing: "collectionView.addSubview(refreshControl)"
+           tableView.refreshControl = refreshControl
         
         
     }
+    @objc func doSomething(refreshControl: UIRefreshControl) {
+        print("Hello World!")
+        let token = LocalDataLayer.shared.getToken()
+
+        Networklayer.shared.fetchHeroes(token: token) { [weak self] allHeroes, error in
+            guard let self = self else { return }
+            if let allHeroes = allHeroes {
+                self.heroes = allHeroes
+                LocalDataLayer.shared.save(heroes: allHeroes)
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }else {
+                print("Error", error?.localizedDescription ?? "")
+            }
+            
+        }
+        
+        // somewhere in your code you might need to call:
+        refreshControl.endRefreshing()
+    }
+    
+    
     
     // Delegate and DataSource
     

@@ -57,7 +57,5 @@ final class LocalDataLayer {
         }
     }
     
-    func favoriteHeroe() {
-        
-    }
+   
 }

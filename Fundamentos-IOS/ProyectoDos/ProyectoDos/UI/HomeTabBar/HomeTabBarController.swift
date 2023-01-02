@@ -14,6 +14,8 @@ class HomeTabBarController: UITabBarController {
         
         setupLayout()
         setupTabs()
+        
+            
 
 
     }
