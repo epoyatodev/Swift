@@ -35,6 +35,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         let token = LocalDataLayer.shared.getToken()
         Networklayer.shared.fetchUser(token: token) { user, error in
             if let user = user {
+                
                 DispatchQueue.main.async {
                     
                     self.imageProfile.setImage(url: user.photo)
@@ -69,19 +70,31 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+   
+        var cont = 0
         
+        for heroe in heroes {
+            if heroe.favorite {
+                cont = cont + 1
+            }
+        }
         
-        return heroes.count
+        return cont
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCollectionCell", for: indexPath) as! CollectionCell
         
+        
+        
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCollectionCell", for: indexPath) as! CollectionCell
             cell.iconImageView.setImage(url: heroes[indexPath.row].photo)
             cell.titleLabel.text = heroes[indexPath.row].name
+           
+    
+            
        
 
-        return cell
+       return cell
         
     }
     
